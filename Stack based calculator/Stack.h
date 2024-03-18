@@ -7,7 +7,9 @@ private:
 public:
 	Stack() : top(nullptr), size(0) {}
 	bool isEmpty();
-	char getTop();
+	char getTopElement();
+	int getSize();
+	Node* getTop();
 	void push(char element);
 	void pop();
 	~Stack();

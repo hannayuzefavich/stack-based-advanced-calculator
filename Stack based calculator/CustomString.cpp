@@ -29,6 +29,5 @@ char CustomString::getByIndex(int index) {
 	return this->list.getByIndex(index);
 }
 
-//make sure to delete all nodes in the list
 CustomString::~CustomString(){}
 

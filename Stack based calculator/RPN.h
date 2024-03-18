@@ -11,5 +11,6 @@ public:
 	bool isOperator(char sign);
 	void convertToPostfix(CustomString infix);
 	void print();
+	~RPN() {}
 };
 

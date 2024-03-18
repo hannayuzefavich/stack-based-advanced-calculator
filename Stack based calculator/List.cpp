@@ -49,11 +49,17 @@ char List::getByIndex(int index) {
 void List::print() {
 	ListNode* current = head;
 	while (current != nullptr) {
-		cout << current->getCharacter();
+		cout << current->getCharacter() << ' ';
 		current = current->getNext();
 	}
 }
 
 List::~List() {
-	
+	/*ListNode* current = head;
+	while (current != nullptr) {
+		ListNode* temp = current->getNext();
+		delete current;
+		current = temp;
+	}
+	head = tail = nullptr;*/
 }

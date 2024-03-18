@@ -4,40 +4,41 @@ bool Stack::isEmpty() {
 	return top == nullptr;
 }
 
-char Stack::getTop() {
+char Stack::getTopElement() {
 	return this->top->getData();
+}
+
+int Stack::getSize() {
+	return this->size;
+}
+
+Node* Stack::getTop() {
+	return this->top;
 }
 
 void Stack::push(char element) {
 	Node* newNode = new Node(element, nullptr);
-	if (this->isEmpty()) {
-		
+	if (this->isEmpty()) {	
 		this->top = newNode;
 	}
-	//no need to find last, just add to the top and reassign the pointer?
 	else {
-		Node* current = top;
-		while (current->getPrev() != nullptr) {
-			current = current->getPrev();
-		}
-		current->setPrev(newNode);
+		newNode->setPrev(top);
+		top = newNode;
 	}
 	this->size++;
 }
 
 void Stack::pop() {
-	/*if (this->isEmpty()) {
-		
-	}*/
-	Node* temp = top;
-	top = top->getPrev(); 
-	this->size--;
-	delete temp;
+	if (!isEmpty()) {
+		Node* temp = top;
+		top = top->getPrev();
+		this->size--;
+		delete temp;
+	}	
 }
 
 Stack::~Stack() {
-	//while?
-	if (!isEmpty()) {
+	/*while (!isEmpty()) {
 		pop();
-	}
+	}*/
 }

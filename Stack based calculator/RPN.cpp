@@ -13,14 +13,14 @@ void RPN::convertToPostfix(CustomString infix) {//change the logic from chars ar
 		if (isOperator(actualSign)) {
 			int priority = this->getPriority(actualSign);
 			if (!stack.isEmpty()) {
-				int lastOnStackPriority = getPriority(stack.getTop());
+				int lastOnStackPriority = getPriority(stack.getTopElement());
 				while (lastOnStackPriority >= priority) {
-					postfix.addElement(stack.getTop());
+					postfix.addElement(stack.getTopElement());
 					stack.pop();
 					if (stack.isEmpty()) {
 						break;
 					}
-					lastOnStackPriority = getPriority(stack.getTop());
+					lastOnStackPriority = getPriority(stack.getTopElement());
 				}
 			}
 			stack.push(actualSign);
@@ -29,8 +29,8 @@ void RPN::convertToPostfix(CustomString infix) {//change the logic from chars ar
 			stack.push(actualSign);
 		}
 		else if (actualSign == ')') {
-			while (!stack.isEmpty() && stack.getTop() != '(') {
-				postfix.addElement(stack.getTop());
+			while (!stack.isEmpty() && stack.getTopElement() != '(') {
+				postfix.addElement(stack.getTopElement());
 				stack.pop();								
 			}
 			stack.pop();
@@ -40,7 +40,7 @@ void RPN::convertToPostfix(CustomString infix) {//change the logic from chars ar
 		}
 	}
 	while (!stack.isEmpty()) {
-		postfix.addElement(stack.getTop());
+		postfix.addElement(stack.getTopElement());
 		stack.pop();
 	}
 }

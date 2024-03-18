@@ -20,5 +20,5 @@ void ListNode::setNext(ListNode* next) {
 }
 
 ListNode::~ListNode() {
-	delete this->next;
+	
 }
