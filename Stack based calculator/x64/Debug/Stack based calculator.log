@@ -1,3 +1,2 @@
-﻿  List.cpp
-C:\Users\juzef\Semestr 5\Stack based calculator\Stack based calculator\List.cpp(47): warning C4715: 'List::getByIndex': not all control paths return a value
+﻿  source.cpp
   Stack based calculator.vcxproj -> C:\Users\juzef\Semestr 5\Stack based calculator\x64\Debug\Stack based calculator.exe

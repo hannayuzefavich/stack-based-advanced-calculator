@@ -55,11 +55,6 @@ void List::print() {
 }
 
 List::~List() {
-	/*ListNode* current = head;
-	while (current != nullptr) {
-		ListNode* temp = current->getNext();
-		delete current;
-		current = temp;
-	}
-	head = tail = nullptr;*/
+	
+	//delete head;
 }

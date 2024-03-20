@@ -22,5 +22,5 @@ void Node::setPrev(Node* prev) {
 }
 
 Node::~Node() {
-
+	//delete prev;
 }

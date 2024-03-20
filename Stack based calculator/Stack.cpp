@@ -38,7 +38,5 @@ void Stack::pop() {
 }
 
 Stack::~Stack() {
-	/*while (!isEmpty()) {
-		pop();
-	}*/
+	//delete top;
 }

@@ -1,13 +1,12 @@
 #include "CustomString.h"
+#include <iostream>
 
 CustomString::CustomString(){}
 
 CustomString::CustomString(char* arr) {
-
-	List list;//pointers initially null as in default constructor
 	for (int i = 0; arr[i] != '.'; i++) {	
 		if (arr[i] == ' ') {
-			i++;//continue?
+			continue;
 		}
 		list.addElement(arr[i]);
 	}
@@ -18,6 +17,9 @@ int CustomString::getSize() {
 }
 
 void CustomString::addElement(char element) {
+	if (element == ' ') {
+		return;
+	}
 	this->list.addElement(element);
 }
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "Stack.h"
 #include "CustomString.h"
+
 class RPN {
 private:
 	CustomString postfix;
