@@ -1,0 +1,10 @@
+﻿  CustomStack.cpp
+  CustomStackNode.cpp
+  CustomString.cpp
+  CustomStringNode.cpp
+  ListCustomString.cpp
+  ListNodeCustomString.cpp
+  RPN.cpp
+  calc.cpp
+  Generating Code...
+  calc.vcxproj -> C:\Users\juzef\Semestr 6\calc\x64\Debug\calc.exe
